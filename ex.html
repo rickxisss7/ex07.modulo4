@@ -1,86 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
     <style>
-       h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    }
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    body{
-        margin: 0 20px;
-    background-color: rgb(224, 241, 241);
-    color: crimson;
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.555) ;
-    }
-    #academy{
-   color: rgb(212, 166, 166); 
-   background-color: rgb(131, 131, 131);
-   border-radius: 5px;
-    padding: 10px;
-    font-weight: bolder;
-    }
-    #curso{
-   color: rgb(212, 166, 166); 
-   background-color: rgb(131, 131, 131);
-   border-radius: 5px;
-   padding: 10px;
-   font-weight: bolder;
-    }
-   
+        body {
+            margin: 0 20px;
+            background-color: rgb(224, 241, 241);
+            color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.555);
+        }
+
+        #academy {
+            color: rgb(212, 166, 166);
+            background-color: rgb(131, 131, 131);
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bolder;
+        }
+
+        #curso {
+            color: rgb(212, 166, 166);
+            background-color: rgb(131, 131, 131);
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: bolder;
+        }
+
+        .submit {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .exx{
+        padding: 20px;
+        margin: 10px 10px;
+        }
     </style>
 
 </head>
+
 <body>
     <h1>
         Formularios
     </h1>
-<br>
-  
-        <main>
-            <h2>
-                FORMULARIO DE NOME:
-            </h2>
-                  <div>
-                    <form action="" method="get">
-                        <p> <label for="itexto">Nome:</label><input type="text" name="texto" id="itexto" placeholder="insira seu nome" autocomplete="off" required> </p>
-                        <input type="submit" value="Enviar">
-                                      </div>
-                                <h2>
-                                    FORMULARIO DE SENHA:
-                                </h2>
-                                     <div>
-                        <p> <label for="isenha">Senha:</label> <input type="password" name="senha" id="isenha" autocomplete="new-password" required minlength="8" maxlength="12"> </p>
-                                     </div>
-                                     <h2>
-                        FORMULARIO DE EMAIL:
-                                    </h2>
-                                        <p><label for="iemail" >Email:</label> <input type="email" name="email" id="iemail" autocomplete="off" required></p>
-                                        <label for="curso">Escolha o curso:</label>
-            <select id="curso" name="curso">
-              <option value="html">HTML</option>
-              <option value="css">CSS</option>
-              <option value="js">JavaScript</option>
-            </select>
-            <br>
-            <br>
-            
-            
-            <label for="academy">Academia:</label>
-            <select name="academia" id="academy"> 
-              <option value="Biceps">Biceps</option>
-              <option value="perna">Perna</option>
-              <option value="Posterior">Posterior</option>
-            
-            </select>
-                    </form>
-        </main>
+    <br>
+
+    <main>
+        <h2>
+            FORMULARIO DE NOME:
+        </h2>
+        <div>
+            <form action="bott" method="get"></form>
+
+            <p> <label for="itexto"> </label> Nome:
+
+                </label><input type="text" name="textop" id="itexto" placeholder="insira seu nome" autocomplete="off"
+                required> </p>
+        
+        </div>
+        <h2>
+            FORMULARIO DE SENHA:
+        </h2>
+        <div>
+            <p> <label for="isenha">Senha:</label> <input type="password" name="senha" id="isenha"
+                    autocomplete="new-password" required minlength="8" maxlength="12"> </p>
+        </div>
+        <h2>
+            FORMULARIO DE EMAIL:
+        </h2>
+        <p><label for="iemail">Email:</label> <input type="email" name="email" id="iemail" autocomplete="off" required>
+        </p>
+        <label for="curso">Escolha o curso:</label>
+
+        <select id="curso" name="curso">
+            <option value="" disabled selected hidden>Selecione um curso</option>
+            <option value="java">Java</option>
+            <option value="c">C#</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+        <br>
+        <br>
 
 
-   
+        <label for="academy">Academia:</label>
+        <select name="academia" id="academy">
+            <option value="" disabled selected hidden>Selecione uma Academia</option>
+            <option value="Biceps">Smart-Fit</option>
+            <option value="perna">Blue-Fit</option>
+            <option value="Posterior">Iron-Berg</option>
+            <option value="corpo">Engenharia do Corpo</option>
+
+
+        </select>
+        <br>
+        <br>
+        <fieldset>
+            <label for="imes">mês:</label>
+            <input type="month" name="mes" id="imes" required value="2025-04">
+            </form><br>
+            <br>
+            <label for="inumero">número:</label>
+            <input type="tel" name="tel" id="itel" required maxlength="11" autocomplete="off">
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferencia</legend>
+            <input type="radio" name="free" id="ifree"> Gta V <br>
+            <input type="radio" name="free" id="ifree"> Call of Duty <br>
+            <input type="radio" name="free" id="ifree"> God Of War <br>
+            <input type="radio" name="free" id="ifree"> Nenhuma das opções.
+        </fieldset>
+
+        <fieldset>
+            <legend>Opinião</legend>
+            <input type="checkbox" name="ch1" id="ich1"> <label for="ich1">Branco</label> <br>
+            <input type="checkbox" name="ch2" id="ich2"> <label for="ich2">Preto</label> <br>
+            <input type="checkbox" name="ch3" id="ich3"> <label for="ich3">Vermelho</label> <br>
+            <input type="checkbox" name="ch4" id="ich4"> <label for="ich4">Rosa</label> <br>
+            <input type="checkbox" name="ch5" id="ich5"> <label for="ich5">Laranja</label> <br>
+            <input type="checkbox" name="ch6" id="ich6"> <label for="ich6">Amarelo</label> <br>
+            <input type="checkbox" name="ch7" id="ich7"> <label for="ich7">Cinza</label> <br>
+            <input type="checkbox" name="ch8" id="ich8"> <label for="ich8">Violeta</label> <br>
+            <input type="checkbox" name="ch9" id="ich9"> <label for="ich9">Azul</label>
+        </fieldset><br>
+
+
+    
+        <br>
+
+
+        <fieldset class="exx">
+            <legend>Extras</legend>
+            <input type="color" name="color" id="icolor"> cor <br>
+            <input type="file" name="fot" id="ifot">
+            <input type="range" name="rangg" id="irangg"
+             min="1" max="10" value="5">qual seu nivel?
+        </fieldset>
+        <textarea name="fpr" id="ifpr" maxlength="30"></textarea>
+    </main>
+    </form>
+
+
+
+
 </body>
+
 </html>
